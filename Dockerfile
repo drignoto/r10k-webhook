@@ -2,7 +2,7 @@ FROM alpine:latest
 
 #labels
 ARG PROJECT_NAME="r10k-webhook"
-ARG VERSION="0.1.0"
+ARG VERSION="latest"
 ARG PROJECT_URL="https://github.com/drignoto/r10k-webhook.git"
 ARG LBLDESCRIPTION="Docker Image for deploy control-repo by r10k, using Gogs repository and webhooks."
 ARG VENDOR="Dr.IgNoTo & EolDavix"
