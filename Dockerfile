@@ -1,6 +1,8 @@
 FROM alpine:latest
 
 #labels
+ARG BUILD_DATE
+ARG VCS_REF
 ARG PROJECT_NAME="r10k-webhook"
 ARG VERSION="0.1.0"
 ARG PROJECT_URL="https://github.com/drignoto/r10k-webhook.git"
@@ -8,9 +10,11 @@ ARG LBLDESCRIPTION="Docker Image for deploy control-repo by r10k, using Gogs rep
 ARG VENDOR="Dr.IgNoTo & EolDavix"
 ARG MAINTAINER_MAIL="dr.ignoto@gmail.com"
 
-LABEL org.label-schema.name=${PROJECT_NAME} \
+LABEL org.label-schema.build-date=${BUILD_DATE} \
+			org.label-schema.name=${PROJECT_NAME} \
 			org.label-schema.description=${LBLDESCRIPTION} \
 			org.label-schema.url=${PROJECT_URL} \
+			org.label-schema.vcs-ref=${VCS_REF} \
 			org.label-schema.vcs-url=${PROJECT_URL} \
 			org.label-schema.vendor=$VENDOR \
 			org.label-schema.version=${VERSION:-latest} \
