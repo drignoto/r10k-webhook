@@ -1,0 +1,3 @@
+Host *
+	IdentityFile /srv/deploy-keys/private-key
+	StrictHostKeyChecking no
